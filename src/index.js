@@ -13,6 +13,7 @@ app.use(express.json());
 app.use('/api/emails', emailSchedulerRoutes);
 
 app.use("/",(req,res)=>{
+  console.log("hi there ")
   res.json({message:"Hello from notification server"});
 })
 app.listen(PORT, () => {
