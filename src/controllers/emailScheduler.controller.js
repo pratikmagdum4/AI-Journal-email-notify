@@ -18,7 +18,7 @@ class EmailSchedulerController {
         scheduledFor: dateTime
       });
     } catch (error) {
-      res.status(500).json({ error: 'Failed to schedule email' });
+      res.status(500).json({ error: 'Failed to schedule email ,the error is ' +error});
     }
   }
 
