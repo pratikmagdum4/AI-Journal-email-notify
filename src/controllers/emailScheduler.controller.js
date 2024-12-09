@@ -12,6 +12,7 @@ class EmailSchedulerController {
       const id = Date.now().toString();
       emailSchedulerService.scheduleEmail(id, dateTime, recipient, subject, description);
       
+      
       res.status(201).json({ 
         message: 'Email scheduled successfully',
         id: id,
