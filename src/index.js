@@ -12,8 +12,8 @@ app.use(express.json());
 
 app.use('/api/emails', emailSchedulerRoutes);
 
-app.use("/",()=>{
-  console.log("Hello from notification server")
+app.use("/",(req,res)=>{
+  res.json({message:"Hello from notification server"});
 })
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
