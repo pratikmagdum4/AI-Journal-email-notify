@@ -22,7 +22,7 @@ router.post('/schedule', async (req, res) => {
     
     res.status(201).json({ 
       message: 'Email scheduled successfully',
-      id: scheduledEmail._id,
+      // id: scheduledEmail._id,
       scheduledFor: dateTime
     });
   } catch (error) {

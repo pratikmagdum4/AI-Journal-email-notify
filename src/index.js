@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
+const connectDB = require('./config/db');
 const emailSchedulerRoutes = require('./routes/emailScheduler.routes');
 
 const app = express();
@@ -16,6 +17,7 @@ app.use("/",(req,res)=>{
   console.log("hi there ")
   res.json({message:"Hello from notification server"});
 })
+connectDB();
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

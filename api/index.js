@@ -13,10 +13,11 @@ app.use(express.json());
 connectDB();
 
 app.use('/api/emails', emailRoutes);
-app.use("/",(req,res)=>{
-  console.log("hi there ")
-  res.json({message:"Hello from notification server"});
-})
+
+// app.use("/",(req,res)=>{
+//   console.log("hi there ")
+//   res.json({message:"Hello from notification server"});
+// })
 // Vercel serverless function handler
 if (process.env.VERCEL) {
   module.exports = app;
